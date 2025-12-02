@@ -1,0 +1,33 @@
+Login seller1 1234
+
+SCAN LOAD P101 50 milk 2025-01-01 2025-12-01 15.50 
+SCAN LOAD P102 100 nuts 2025-05-15 2025-12-10 5.00 
+SCAN LOAD P103 25 coffee 2025-07-20 2026-03-30 8.75 
+SCAN LOAD P104 50 butter 2025-03-01 2026-03-01 15.50 
+SCAN LOAD P105 100 apple 2025-09-15 2026-12-10 5.00 
+SCAN LOAD P106 25 cheese 2025-05-20 2026-03-30 8.75 25
+
+SCAN Sell P101 10 Customer_A_Store Jeddah
+SCAN sell P101 40 Customer_b_Store Mecca
+SCAN sell P103 40 Customer_c_Store Riyadh
+SCAN sell P103 10 Customer_d_Store Jeddah
+SCAN Sell P102 10 Customer_f_Store Dammam
+SCAN sell P101 10 Customer_g_Store Jeddah
+
+SCAN RETURN P101 
+SCAN RETURN P106
+SCAN RETURN P105
+
+
+PAY
+Generate_Report daily
+
+logout
+
+Login manager1 9876
+
+Generate_Report monthly
+
+logout
+
+login seller2 14554

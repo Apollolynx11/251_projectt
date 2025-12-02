@@ -1,0 +1,2 @@
+USER seller1 1234 SalesPerson
+USER manager1 9876 Manager
