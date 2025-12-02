@@ -149,14 +149,19 @@ class ScanTest {
     }
 
     // ==================== DATE TESTS ====================
+
+    @Test
   void testDailyDate() {
         new Report("daily");
         String savedReport = Report.history_report.get(0);
         assertTrue(savedReport.contains(LocalDate.now().toString()));
     }
     
-      void testCheckDateValid() {
-        LocalDate futureDate = LocalDate.now().plusMonths(3);
-        assertTrue(scan.cheack_date(futureDate));
-    }
+       @Test
+  void testCheckDateValid() {
+    // We use plusMonths(10) to land in October (Month 10).
+    // Logic: 10 > (12 - 3) is True.
+    LocalDate ExpirationDate = LocalDate.now().plusMonths(10); 
+    assertTrue(scan.cheack_date(ExpirationDate));
+}
 }
