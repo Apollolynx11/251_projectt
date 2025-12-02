@@ -1,4 +1,4 @@
-package vansellersystem;
+package vansale;
 
 import java.io.File;
 import java.io.FileNotFoundException;
