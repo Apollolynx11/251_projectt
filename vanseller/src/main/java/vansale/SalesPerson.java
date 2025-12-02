@@ -1,13 +1,14 @@
 package vansale;
 
+import vansale.DriverProfile;
 import java.io.FileNotFoundException;
 
 class SalesPerson extends User {
-    VanSalesPerson vanSalesPerson;
+    DriverProfile DriverProfile;
     public SalesPerson(String username, String password, String role) {
         super(username, password, role);
     }
-    public VanSalesPerson getVanSalesPerson() throws FileNotFoundException {
+    public DriverProfile getDriverProfile() throws FileNotFoundException {
         return user_info(username);
     }
 }

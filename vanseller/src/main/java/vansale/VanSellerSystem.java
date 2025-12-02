@@ -1,5 +1,8 @@
 package vansale;
 
+import vansale.User;
+import vansale.Report;
+import vansale.Product;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,9 +1,12 @@
 package vansale;
 
+import vansale.SalesPerson;
+import vansale.DriverProfile;
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import vansale.Manager;
 
 // Parent Class
 public class User {
@@ -59,12 +62,12 @@ public class User {
         System.out.println("User not found");
         return null;
     }
-    public VanSalesPerson user_info(String username) throws FileNotFoundException {
+    public DriverProfile user_info(String username) throws FileNotFoundException {
         Scanner input = new Scanner(new File("user_info.txt"));
         while(input.hasNext()){
             String userName = input.next();
             if(userName.equalsIgnoreCase(username)){
-                return new VanSalesPerson(input.next(), input.next());
+                return new DriverProfile(input.next(), input.next());
             }
             else {
                 input.nextLine();
