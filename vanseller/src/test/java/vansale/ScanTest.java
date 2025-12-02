@@ -159,8 +159,6 @@ class ScanTest {
     
        @Test
   void testCheckDateValid() {
-    // We use plusMonths(10) to land in October (Month 10).
-    // Logic: 10 > (12 - 3) is True.
     LocalDate ExpirationDate = LocalDate.now().plusMonths(10); 
     assertTrue(scan.cheack_date(ExpirationDate));
 }
