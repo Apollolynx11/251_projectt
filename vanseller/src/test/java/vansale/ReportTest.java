@@ -11,10 +11,6 @@ public class ReportTest {
     @Test
   
 public void testReportCalculation() {
-    // Clear  lists
-    Scan.soldProducts.clear();
-    Scan.returnedProducts.clear();
-    Report.history_report.clear();
 
     // Add Data directly 
     Scan.soldProducts.add(new Product("P1", 10, "Milk", LocalDate.now(), LocalDate.MAX, 10.0));
